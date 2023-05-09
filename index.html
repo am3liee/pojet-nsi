@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>titre de la page</title>
+        <meta charset="utf8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css"/>
+    </head>
+    <body>
+        <div class="header">
+            <h1>bienvenue sur mon site</h1>
+        </div>
+        <div class="nav">
+            <img src="logo.png" class="logo"/>
+            <ul>
+                <li>Accueil</li>
+                <li>Qu'esT ce que l'anxiété ?</li>
+                <li>Les symptomes de l'anxiété</li>
+                <li>Blog</li>
+                <li>A propos</li>
+                <li>Me contacter</li>
+            </ul>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/amelie_dce/" target="bank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.snapchat.com/add/amelie_dce?share_id=Y1CG3-zFyOQ&locale=fr-FR" target="bank">
+                <i class="fab fa-snapchat"></i>
+                </a>
+                <a href="https://www.facebook.com/amelie.dce/" target="bank">
+                <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="mailto:amelie.decle2@gmail.com" target="bank">
+                <i class="far fa-envelope-open"></i>
+                </a>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h2>L'anxiété</h2>
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <h3>Définition</h3>
+                <p>Inquiétude pénible, tension nerveuse, causée par l'incertitude, l'attente; angoisse: Son regard trahissait son anxiété.
+                </p>
+                <button id="bouton1">En savoir plus</button>
+                <p class="savoirplus">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor varius lacinia.</p>
+            </div>
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <h3>symptomes</h3>
+                <p> -fatigue;troubles du sommeil; maux de tête; étourdissements, vertiges ou impression d'évanouissement imminent;
+                    </p>
+                <button id="bouton2">En savoir plus</button>
+            </div> 
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <h3>Définition</h3>
+                <p>Inquiétude pénible, tension nerveuse, causée par l'incertitude, l'attente; angoisse: Son regard trahissait son anxiété.
+                </p>
+                <button>En savoir plus</button>
+            </div> 
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <h3>Définition</h3>
+                <p>Inquiétude pénible, tension nerveuse, causée par l'incertitude, l'attente; angoisse: Son regard trahissait son anxiété.
+                </p>
+                <button>En savoir plus</button>
+            </div>
+            <div class="clear"></div>
+            <div id="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R_gwnpJbOmQ" stitle="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="arriereplan ">
+            <div class="container">
+                <h2>titre</h2>
+                <p class="texte">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus velit dignissim est ullamcorper congue. 
+                    Vestibulum elementum orci ac sollicitudin eleifend. Donec eget efficitur nulla. Duis sapien dolor, 
+                    elementum nec egestas ut, sodales nec massa. Ut massa ipsum, accumsan sed tincidunt non, vestibulum quis ligula. 
+                    Cras facilisis id elit ac rutrum. Donec non venenatis ante, ut blandit ipsum. Phasellus nec placerat magna. 
+                    Mauris consectetur auctor enim interdum interdum. Quisque lobortis facilisis tellus vitae pulvinar. Maecenas 
+                    faucibus nisl a arcu finibus dictum. Etiam sodales rutrum lectus, ut aliquam enim. Aenean cursus urna eget leo 
+                    luctus bibendum. Proin efficitur purus in pretium viverra. Nullam gravida eget tortor in euismod.</p>
+                    <img src="image2.PNG" class="imagetest">
+            </div>
+        </div>
+        <div class="container">
+        <h2>galerie photos</h2>
+            <div class="photo">
+                <img src="image3.PNG"/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="photo">
+                <img src="image4.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="clear"></div>
+            <div class="photo">
+                <img src="image3.PNG"/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="photo">
+                <img src="image4.jpg">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="clear">
+            </div>
+
+            <div id="overlay">
+                <div class="popin">
+                    <i class="fas fa-times" id="close"></i>
+                </div>
+            </div>
+
+            <i class="fas fa-arrow-circle-up" id="gotop"></i>
+
+        
+            <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+            <script>
+                $("#bouton1").click(function() {
+                    $(".savoirplus").slideToggle();
+                    // show () => affiche
+                    // hide () => cache 
+                    // toggle () => les deux
+                    // slideToogle () => avec effet slide
+                    // fadeToggle () = avec effet fondu
+                });
+
+                $("#bouton2").click(function() {
+                    $("#youtube").slideToggle();
+                });
+
+                $(window).scroll(function () {
+                    $("#overlay").fadeIn(1000);
+                });
+
+                $("#close").click(function() {
+                    $("#overlay").fadeOut().remove();
+                });
+
+                $("#gotop").click(function() {
+                    $("html, body").animate({scrollTop:0});
+                });
+
+
+            </script>
+    </body>
+</htlm>
